@@ -1,0 +1,153 @@
+:root {
+    --font: 'Figtree', sans-serif;
+    --darkColor: #111111;
+    --paragraphColor: #6b6b6b;
+    --pageColor: #f4d04e;
+    --spacing200: 1.5rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: var(--font);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* We want to really hide this h1 since the figma file does not include it, but leave it for SEO improvement  */
+h1 {
+    position: absolute;
+    left: -9999px;
+    visibility: hidden;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--pageColor);
+    /* overflow: hidden; */
+    scrollbar-width: none;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* formatting */
+    max-width: 90%;
+    width: 350px;
+    height: auto;
+    background-color: white;
+    padding: var(--spacing200);
+    margin: var(--spacing200);
+    gap: var(--spacing200);
+
+    /* shape */
+    border: 1px solid var(--darkColor);
+    box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+    border-radius: 20px;
+
+}
+
+.card-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.learning-badge {
+    background: var(--pageColor);
+    display: inline-block;
+    /* Ensure it only takes content width */
+    align-self: flex-start;
+    /* Prevents flexbox from resizing it */
+    font-size: 14px;
+    /* font size */
+    padding: 4px 10px;
+    /* Adds some spacing inside */
+    font-weight: 800;
+    /* Ensures the text stands out */
+    border-radius: 5px;
+    /* Optional: gives it a rounded shape */
+    margin-bottom: var(--spacing200);
+}
+
+.date-card {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: var(--spacing200);
+}
+
+.subheading-item {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: var(--spacing200);
+}
+
+.grayed-out-paragraph {
+    font-size: 16px;
+    font-weight: 500;
+    color: #6b6b6b;
+    margin-bottom: var(--spacing200);
+}
+
+.author-name {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.author-name img {
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.author-name p {
+    align-items: center;
+    font-size: 16px;
+    font-weight: 800;
+    padding: var(--spacing200);
+    margin-bottom: var(--spacing200);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 375px) {
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: #d5e1ef;
+    }
+
+    .card-container {
+        max-width: 90%;
+    }
+
+}
